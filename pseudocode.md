@@ -85,13 +85,13 @@
             - deleting a user
             - deleting specific data
 
-## Consider
+## Consider:
 - information the user can recieve back to understand what is happening that they can't see
     - helpful information to our frontend
     - aka defensive programming
     - http status codes for the future frontend to recieve to know if something works or not
 - how the user might want to see/organize their music when using the app
-- the relationships between tables/categories
+- the relationships between tables/categories:
     - one to one
     - one to many
     - many to many
@@ -139,6 +139,8 @@
 - genre/playlist
 
 ### Relationship Statements:
+### simplest - one to one rules
+
 - many songs to one artist
 - many songs to one album
 - many songs to one genre
@@ -149,7 +151,6 @@
 - many artists to one genre
 - many artists to one playlist
 
-- many albums to one song - ???
 - many albums to one artist
 - many albums to one genre
 - many albums to one playlist
@@ -226,3 +227,11 @@
         - be careful with path parameters (variable could be many things) and the order of our structure of paths
         - have to be careful not to match requests that were meant for a different route
     - data goes through as JSON - have to extract the JSON
+
+
+## File Structure:
+- main.py
+- models.py
+- schemas.py
+- routers *folder*
+    - 
