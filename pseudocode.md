@@ -69,17 +69,17 @@
         - making sure the user's information is secured - hashing their password
         - consider the user's journey to have minimal pain points
             - not having to login again - refresh token works flawlessly in the background
-        **C**reate:
+        - **C**reate:
             - creating the database
             - creating a new table as a new feature (new type of data to store)
-        **R**ead:
+        - **R**ead:
             - pull information to check user accounts registered
             - check/read data stored in databse
-        **U**pdate:
+        - **U**pdate:
             - a developer wanting to edit the database structure
             - a developer wanting to edit the data
 
-        **D**elete:
+        - **D**elete:
             - having the ability to delete a previous 'outdated' feature in the database
             - deleting all tables
             - deleting a user
