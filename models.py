@@ -63,3 +63,11 @@ class Playlist(Base):
     #place relationship here
 
 #! CHILD/BRIDGE MODELS -----------------------------------------------------------------------
+
+#user - playlist
+
+#song - playlist
+
+#song - album
+
+#artist - album
