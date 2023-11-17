@@ -122,14 +122,16 @@
 -
 
 ### Child/Bridge/Pivot Tables:
-- user/playlist
+- REMEMBER - pivot tables go both ways!!!
 
-- song/artist
-- song/album
+- user/playlist ---- this would be a DIRECT connection in this case - not a pivot!!
+
+- song/artist -
+- song/album -
 - song/genre
-- song/playlist
+- song/playlist -----
 
-- artist/album
+- artist/album -
 - artist/genre
 - artist/playlist
 
@@ -232,6 +234,8 @@
 ## File Structure:
 - main.py
 - models.py
+    - where we define what the tables are going to look like with the different classes
 - schemas.py
+    - where data validation happens
 - routers *folder*
-    - 
+    - our paths/routes/endpoints
