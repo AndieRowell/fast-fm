@@ -46,19 +46,19 @@
         - a user wanting to login to use this app
         - the possible 'endpoints/routes' a user will want to go to
          - create, delete, & edit a playlist
-        **C**reate:
+        - **C**reate:
             - create an account (username, password, etc)
             - create a playlist
-        **R**ead:
+        - **R**ead:
             - sort/filter through their playlist, saved songs
             - select one song
             - look at all the songs in a playlist
             - look at an artist...
             - etc...
-        **U**pdate:
+        - **U**pdate:
             - add a new song to their playlist
             - rename a playlist
-        **D**elete:
+        - **D**elete:
             - delete a song from a playlist
             - delete all songs from playlist
             - delete a playlist
