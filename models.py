@@ -1,16 +1,22 @@
 # imports
+import sqlalchemy as sa
 from sqlalchemy import Column, String, Integer, Boolean, ForeignKey, Text
 from sqlalchemy.orm import DeclarativeBase, Mapped, relationship
 from sqlalchemy.sql.expression import text
 from typing import List, Optional
 from sqlalchemy.sql.sqltypes import TIMESTAMP, DateTime
-
-# do i need to import Base here? or does this clash with the base model below it?
+from sqlalchemy.ext.declarative import declarative_base
 from database import Base
 
+# do i need to import Base here? or does this clash with the base model below it?
+
+
 # define the Base model
-class Base(DeclarativeBase):
-    pass
+# class Base(DeclarativeBase):
+#     pass
+
+#save this for later:
+#op.create_table('users', sa.Column('id', sa.Integer(), primary_key=True, nullable=False), sa.Column('name', sting))
 
 #! PARENT MODELS ----------------------------------------------------------------
 
@@ -64,10 +70,24 @@ class Playlist(Base):
 
 #! CHILD/BRIDGE MODELS -----------------------------------------------------------------------
 
-#user - playlist
+# #user - playlist
+# class UserPlaylist(Base):
+#     __tablename__ = "user_playlist"
 
-#song - playlist
+#     id = Column(Integer, primary_key=True nullable=False, index=True)
 
-#song - album
+#     name = Column(String, nullable=False)
 
-#artist - album
+# #song - playlist
+# class SongPlaylist(Base):
+#     __tablename__="song_playlist"
+
+
+# #song - album
+# class SongAlbum(Base):
+#     __tablename__="song_album"
+
+
+# #artist - album
+# class ArtistAlbum(Base):
+#     __tablename__="artist_album"

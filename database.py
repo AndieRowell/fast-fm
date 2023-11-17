@@ -4,6 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from config import settings
 # import psycopg2 #do i need this?
 
+
 DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_post}/{settings.database_name}'
 
 engine = create_engine(DATABASE_URL)

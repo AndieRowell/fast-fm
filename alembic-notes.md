@@ -82,3 +82,10 @@
 - alembic --help
     see what commands we have
 - when we want to make a change to our database we create a **revision**
+
+- alembic revision --help
+    - shows our options
+
+- alembic revision -m "save message"
+
+- fill in the functions - upgrade and downgrade
