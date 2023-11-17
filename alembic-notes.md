@@ -78,3 +78,14 @@
                             - "config.set_main_option("sqlalchemy.url, postgresql://{settings.database_username}:{settings.database_password}@localhost{settings.database_hostname}:{settings.database_post}/{settings.database_name}")
                         - NOW we are not hardcoding any values at this point yay!
                         - alembic should be set!
+
+- alembic --help
+    see what commands we have
+- when we want to make a change to our database we create a **revision**
+
+- alembic revision --help
+    - shows our options
+
+- alembic revision -m "save message"
+
+- fill in the functions - upgrade and downgrade
