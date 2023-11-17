@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from config import settings
-import psycopg2 #do i need this?
+# import psycopg2 #do i need this?
 
 DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_post}/{settings.database_name}'
 
@@ -18,3 +18,5 @@ def get_db():
         yield db
     finally:
         db.close()
+
+db_dependency = Annotated[Session, Depends(get_db)] #not sure if needed here
