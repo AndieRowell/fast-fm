@@ -1,11 +1,12 @@
 # imports
 from sqlalchemy import Column, String, Integer, Boolean, ForeignKey, Text
-from sqlalchemy.orm import DeclarativeBase, Mapped, relationship,
+from sqlalchemy.orm import DeclarativeBase, Mapped, relationship
 from sqlalchemy.sql.expression import text
-from typing import List, Optional,
+from typing import List, Optional
 from sqlalchemy.sql.sqltypes import TIMESTAMP
 
-# do i need to impot Base here?
+# do i need to import Base here? or does this clash with the base model below it?
+from database import Base
 
 # define the Base model
 class Base(DeclarativeBase):
@@ -16,10 +17,10 @@ class User(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, nullable=False, index=True)
-    name = Column(String, nullable=False)
-    username = Column(String, nullable=False)
-    email = Column(String, nullable=False, unique=True)
-    password = Column(String, nullable=False)
+    name = Column(String(50), nullable=False)
+    username = Column(String(50), nullable=False)
+    email = Column(String(50), nullable=False, unique=True)
+    password = Column(String(50), nullable=False)
     created_timestamp = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
 
 # Song model
